@@ -1,5 +1,5 @@
 # cp
-Small cp clone for Linux \n
+Small cp clone for Linux\
 There is currently no --help option, but I am expecting a basic understanding of cp anyway.
 
 ## Build: 
