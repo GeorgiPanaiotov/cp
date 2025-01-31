@@ -1,0 +1,1 @@
+This long text is supposed to get copied. I test this bigger text because I need to be sure that the program does indeed work! There is no usage error feature now, but if you do indeed clone this repo, it is somewhat expected that you do know how cp works anyway. A very IMPORTANT detail is that this code works ONLY on Linux
