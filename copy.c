@@ -25,10 +25,20 @@ int main(int argc, char *argv[]) {
 
 	while((br = read(rdfd, buffer, MAX_COUNT)) > 0) {
 		buffer[br] = '\0';
-		write(wrfd, buffer, MAX_COUNT);
+		ssize_t bw = write(wrfd, buffer, MAX_COUNT);
+
+		if (bw == -1) {
+			perror("Cannot write to the file!");
+			exit(EXIT_FAILURE);
+		}
+	}
+
+	if (br == -1) {
+		perror("Cannot read file");
+		exit(EXIT_FAILURE);
 	}
 
 	close(rdfd);
 	close(wrfd);
-	return 0;
+	exit(EXIT_SUCCESS);
 }
